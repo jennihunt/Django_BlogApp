@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Blog App {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home/styles.css' %}">
+    <title>Blog Platform</title>
+</head>
+<body>
+    <nav id="nav">
+        {% if user.is_authenticated %}
+
+        
+        <a href="{% url 'post_list' %}">Home</a> 
+        <a href="{% url 'user_post_count' %}">User Post Counts</a> 
+        <a href="{% url 'most_commented_posts' %}">Most Commented Posts</a> 
+        <a href="{% url 'posts_without_comments' %}">Posts Without Comments</a> 
+        <a href="{% url 'category_posts' %}">Categories</a> 
+        <a href="{% url 'post_create' %}">Create Post</a> 
+        <a href="{% url 'category_create' %}">Create Category</a>
+        <a id="logoutbtn" href="{% url 'logout' %}">Logout</a> 
+
+        {% else %}
+
+        <a href="{% url 'login' %}">Login</a>
+        <a href="{% url 'register' %}">Register</a>
+        
+        {% endif %}
+    </nav>
+    <hr>
+    <main id="main">
+        {% block content %}{% endblock %}
+    </main>
+</body>
+
+</html>

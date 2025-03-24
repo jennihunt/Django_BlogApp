@@ -1,0 +1,64 @@
+body{
+    background-color:rgba(171, 183, 196, 0.5);
+    font-size: 18px;
+}
+
+#nav{
+    background-color: rgb(56, 153, 238,.7);
+    padding:10px;
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+#nav a {
+    padding: 10px;
+    text-decoration: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px grey;
+    border: 2px solid grey;
+    border-radius: 25%;
+}
+#logoutbtn{
+    justify-content: flex-end;
+}
+#main{
+   text-align: center;   
+}
+
+#main ul {
+    list-style-type: none;
+    text-align: left;
+    font-size: 25px;
+    padding: 2% 10%;
+}
+
+h1{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button{
+    background-color: rgb(111, 209, 209);
+    border-radius: 18%;
+}
+#blogimg{
+    width: 90%;
+    height:300px;
+    border-radius: 20px;
+}
+
+#logindiv{
+    display: flex;  
+
+}
+
+#logindiv form{
+    width: 40%;
+}
+#loginimg{
+    width: 55%;
+    border-radius: 20px;
+    border: 5px solid black;
+}

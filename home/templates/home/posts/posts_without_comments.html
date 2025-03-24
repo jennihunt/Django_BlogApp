@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+{% block content %}
+    <h1>All Posts without Comments</h1>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a> by {{ post.author }} ({{ post.comment_count }} comments)
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+{% load static%}
+{% block content %}
+    <h1>Login</h1>
+    <div id="logindiv">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Login</button>
+    </form>
+    <img id="loginimg" src="{% static 'home/loginimg.jpg' %}" alt="blog img"></div>
+{% endblock %}
