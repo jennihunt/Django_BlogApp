@@ -47,7 +47,7 @@ blog/
 1. Clone the repository:
 
     ```sh
-    git clone <repo-url>
+    git clone https://github.com/jennihunt/Django_BlogApp.git
     cd blog
     ```
 
